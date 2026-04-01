@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+
+  <h1>Login</h1>
+
+  <input id="email" type="email" placeholder="Email">
+  <br>
+  <input id="password" type="password" placeholder="Password">
+  <br><br>
+
+  <button id="loginBtn">Login</button>
+  <button id="signupBtn">Sign Up</button>
+
+  <script type="module">
+    import { supabase } from "./auth.js";
+
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+
+    document.getElementById("loginBtn").onclick = async () => {
+      const { error } = await supabase.auth.signInWithPassword({
+        email: email.value,
+        password: password.value
+      });
+
+      if (error) {
+        alert(error.message);
+        return;
+      }
+
+      window.location.href = "dashboard.html";
+    };
+
+    document.getElementById("signupBtn").onclick = async () => {
+      const { error } = await supabase.auth.signUp({
+        email: email.value,
+        password: password.value
+      });
+
+      if (error) {
+        alert(error.message);
+        return;
+      }
+
+      alert("Check your email to confirm your account");
+    };
+  </script>
+
+</body>
+</html>
