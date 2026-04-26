@@ -24,60 +24,7 @@
     <a href="https://wscofficial.github.io/TexScript">TexScript</a>
   </div>
 </div>
-
-
-  <p>Powered by</p>  <img src="images/supabase-logo-icon.png" alt="Supabase">
-  
-  <h1>Login</h1>
-
-  <input id="email" type="email" placeholder="Email">
-  <br>
-  <input id="password" type="password" placeholder="Password">
-  <br><br>
-<div
-  class="cf-turnstile"
-  data-sitekey="<0x4AAAAAADDpnVscbX6sJT_4>"
-  data-theme="light"
-  data-size="normal"
-  data-callback="verified"
-></div>
-
-  <button id="loginBtn">Login</button>
-  <button id="signupBtn">Sign Up</button>
-
-  <script type="module">
-    import { supabase } from "./auth.js";
-
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
-
-    document.getElementById("loginBtn").onclick = async () => {
-      const { error } = await supabase.auth.signInWithPassword({
-        email: email.value,
-        password: password.value
-      });
-
-      if (error) {
-        alert(error.message);
-        return;
-      }
-
-      window.location.href = "https://wscofficial.github.io/dashboard.html";
-    };
-
-    document.getElementById("signupBtn").onclick = async () => {
-      const { error } = await supabase.auth.signUp({
-        email: email.value,
-        password: password.value
-      });
-
-      if (error) {
-        alert(error.message);
-        return;
-      }
-
-      alert("Check your email to confirm your account");
-    };
+    <h1>The login is getting replaced by our own login system. Goodbye Supabaze because your email link didn't work.</h1>
   </script>
 
 </body>
