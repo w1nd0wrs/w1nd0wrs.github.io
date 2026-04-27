@@ -3,6 +3,9 @@
 <head>
   <title>Login</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.5.0/styles/webawesome.css">
+<script type="module" src="https://ka-f.webawesome.com/webawesome@3.5.0/webawesome.loader.js"></script>
+<script src="https://kit.fontawesome.com/f193b234bb.js" crossorigin="anonymous"></script>
   <script
   src="https://challenges.cloudflare.com/turnstile/v0/api.js"
   async
@@ -23,13 +26,14 @@
     <a href="https://wscofficial.github.io/TexScript">TexScript</a>
   </div>
 </div>
+  <h1>Login</h1>
 <form action="/login.html" method="POST">
-        <input type="text" name="username" placeholder="Username" required />
-        <input type="password" name="password" placeholder="Password" required />
+        <wa-input type="text" name="username" placeholder="Username" requried />
+        <wa-input type="password" name="password" placeholder="Password" requried />
 
         <!-- Turnstile widget with basic configuration -->
         <div class="cf-turnstile" data-sitekey="0x4AAAAAADDpnVscbX6sJT_4"></div>
-        <button type="submit">Log in</button>
+        <wa-button type="submit" appearance="filled-outlined" variant="success"><i class="fa-solid fa-arrow-right-to-bracket"></i>Log in</wa-button>
         <div class="signup-link">Not a member? <a href="/signup.html">Signup now</a></div>
     </form>
     <p>it is not working yet uh</p>
