@@ -27,15 +27,17 @@
   </div>
 </div>
   <h1>Login</h1>
+  <div class="loginbox">
 <form action="/login.html" method="POST">
-        <wa-input type="text" name="username" placeholder="Username" with-clear requried />
-        <wa-input type="password" name="password" placeholder="Password" password-toggle requried />
-
+        <wa-input type="text" name="username" placeholder="Username" with-clear requried ></wa-input>
+        <wa-input type="password" name="password" placeholder="Password" password-toggle requried ></wa-input>
+        <a class="passwordlink" href="/recovery.html">Forgot your password?</a>
         <!-- Turnstile widget with basic configuration -->
         <div class="cf-turnstile" data-sitekey="0x4AAAAAADDpnVscbX6sJT_4"></div>
         <wa-button type="submit" appearance="filled-outlined" variant="success"><i class="fa-solid fa-arrow-right-to-bracket"></i>Log in</wa-button>
         <div class="signup-link">Not a member? <a href="/signup.html">Signup now</a></div>
     </form>
     <p>it is not working yet uh</p>
+  </div>
 </body>
 </html>
