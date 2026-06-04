@@ -4,6 +4,8 @@
     <title>Medal Videos - Windows Studio Creations</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="/style.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@videojs/html/cdn/video.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@videojs/html/cdn/media/hls-video.js"></script>
 </head>
 <body style="color:white; text-align:center; font-family:Lucida Sans Unicode, sans-serif";>
     <div class="topbar">
@@ -19,5 +21,55 @@
     <a href="https://w1nd0wrs.github.io/TexScript">TexScript</a>
   </div>
 </div>
+    <h1>Medal Videos</h1>
+    <p>You can see our medal channels by the buttons below.</p>
+    <a href="https://medal.tv/u/W1nd0Wr?tab=home" >
+        <button>miniopy7000</button>
+    </a>
+    <a href="https://medal.tv/u/iamgreenWSC" >
+        <button>iamgreen572</button>
+    </a>
+    <hr>
+    <h2>Our latest / funniest Medal Videos</h2>
+    <!--
+  The PlayerProvider passes state between the UI components
+  and Media, and makes fully custom UIs possible.
+  It does not have layout by default (display:contents)
+ -->
+<video-player>
+  <!--
+    Skins contain the entire player UI and are easily swappable.
+    They can each be "ejected" for full control and customization
+    of UI components.
+   -->
+  <video-skin>
+    <!--
+      Media are players without UIs, handling networking
+      and display of the media. They are easily swappable
+      to handle different sources.
+    -->
+    <hls-video src="https://stream.mux.com/FWXz9Jtag002PmSxp92A00VSoKnMKvH8993BJbfG02H01TE.m3u8" playsinline></hls-video>
+  </video-skin>
+</video-player>
+    <!--
+  The PlayerProvider passes state between the UI components
+  and Media, and makes fully custom UIs possible.
+  It does not have layout by default (display:contents)
+ -->
+<video-player>
+  <!--
+    Skins contain the entire player UI and are easily swappable.
+    They can each be "ejected" for full control and customization
+    of UI components.
+   -->
+  <video-skin>
+    <!--
+      Media are players without UIs, handling networking
+      and display of the media. They are easily swappable
+      to handle different sources.
+    -->
+    <hls-video src="https://stream.mux.com/q29DR8nxwT01o401C9QZ6KmmJSJOlCPtBaeQMjfxX7BbI.m3u8" playsinline></hls-video>
+  </video-skin>
+</video-player>
 </body>
 </html>
